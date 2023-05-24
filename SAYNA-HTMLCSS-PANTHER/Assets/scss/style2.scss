@@ -1,0 +1,101 @@
+@import '_partial';
+
+
+body {
+    background-image: url('../Illustrations_&_Logo/all_pages/arrière_plan.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #fff;
+}
+
+/* -------------------------------------------------------------*/
+
+
+
+/* ----------------------------- SECTION BANNER ----------------------------- */
+
+#banner {
+    @extend .d-flex, .flex_start;
+    height: 90vh;
+    padding: 0 10%;
+    background-image: url('../Illustrations_&_Logo/Wakanda/Pantherwakanda1.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: left 4vw center;
+    
+    h1, h2 {
+        color: var(--silver);
+    }
+
+    h1 {
+        font-family: 'Beyno';
+        font-size: 60px;
+        margin-bottom: 10px;
+    }
+
+    h2 {
+        font-family: 'Wakanda';
+        font-size: 43px;
+        margin-bottom: 3vw;
+    }
+
+    p {
+        width: 40%;
+        text-align: justify;
+    }
+}
+/* ------------------------------------------------------------------ */
+
+
+/* ----------------------------- ARTICLES ----------------------------- */
+
+#history {
+    padding: 8vw 0;
+    background: url('../Illustrations_&_Logo/Wakanda/Pantherwakanda2.png');
+    background-repeat: no-repeat;
+    background-size: 100vw auto;
+    margin: 10px 0;
+    height: 340vh;
+
+    .container {
+        @extend .d-flex, .flex_evenly;
+        width: 100%;
+        height: 100%;
+
+    }
+}
+
+.left, .right {
+    @extend .d-flex, .flex_between, .d_column;
+    width: 40%;
+    height: 100%;
+    
+    h2 {
+        margin-bottom: 20px;
+    }
+
+    p {
+        margin-bottom: 10px;
+        text-align: justify;
+    }
+
+    .list{
+        text-align: start;
+    }
+}
+
+iframe {
+    width: 100%;
+    margin: 0;
+}
+
+.illustration {
+    width: 100%;
+    
+    img {
+        width: 100%;
+    }
+}
+
+/* ------------------------------------------------------------------ */
+

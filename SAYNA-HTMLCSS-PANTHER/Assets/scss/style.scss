@@ -1,0 +1,356 @@
+@import '_partial';
+
+
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+section a {
+    text-decoration: underline;
+    text-align: center;
+}
+
+img {
+    max-width: 100%;
+}
+
+/* sidebar */
+
+.sidebar {
+    position: absolute;
+    top: 0;
+    left: 2vw;
+    height: 60vh;
+    width: 1vw;
+    border: 3px solid var(--silver);
+    border-top: none;
+    border-bottom: none;
+    
+    .container {
+        position: relative;
+        height: 100%;
+        width: 100%;
+    }
+
+    .row {
+        @extend .d-flex, .d_column, .flex_between;
+        position: absolute;
+        height: 30%;
+        width: 100%;
+        bottom: 0;
+        right: -50%;
+        padding-top: 10px;
+        background-color: #0f1828;
+
+        img {
+            width: 100%;
+        }
+    }
+
+} 
+
+/* sb */
+
+#banner {
+    @extend .d-flex, .flex_start;
+    height: 89vh;
+    padding: 0 8%;
+    background-image: url('../Illustrations_&_Logo/accueil/Pantherhome1.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: 40vw 4vw;
+    margin-bottom: 10vw;
+
+    .container {
+        width: 50%;
+    }
+
+    h1 {
+        font-size: 50px !important;
+    }
+
+    h1, h2 {
+        color: var(--silver);
+    }
+
+    p {
+        width: 80%;
+        margin: 3vh 0;
+    }
+}
+
+
+#slide {
+    height: 40vh;
+    padding-left: 5vw;
+
+    img {
+        width: 100%;
+        height: 100%
+    }
+
+    .container {
+        @extend .d-flex;
+        flex-direction: row;
+        padding-left: 3%;
+        height: 100%;
+        position: relative;
+        background-color: var(--darkblue);
+    }
+
+    .button {
+        @extend .d-flex, .flex_center;
+        position: absolute;
+        text-align: center;
+        font-weight: bold;
+        font-size: 14px;
+        top: 45%;
+        right: 5%;
+        border-radius: 50%;
+        height: 35px;
+        width: 35px;
+        background: var(--darkblue);
+    }
+
+    .card {
+        display: grid;
+        grid-template-columns: 45% 55%;
+        grid-template-rows: 100%;
+        width: 50vw;
+        height: 100%;
+
+        .card_img {
+            @extend .d-flex, .flex_center;
+        }
+
+        .card_text {
+            padding: 14% 10%;
+        }
+
+        .zoom {
+            position: relative;
+            height: 120% !important;
+        }
+
+        h2{
+            margin-bottom: 7px;
+        }
+
+        p, a {
+            font-size: 12px;
+            text-align: justify;
+        }
+    }
+}
+
+
+/* s bio */
+
+#presentation {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    margin: 10vw 6vw;
+}
+
+article {
+    margin-top: 4vw;
+
+    h2, p {
+        margin-bottom: 1.5vw;
+        text-align: justify;
+    }
+}
+
+.profil {
+    @extend .d-flex, .flex_evenly, .d_column;
+    position: relative;
+
+    .card {
+        @extend .d-flex, .d_column;
+        justify-content: flex-end;
+        align-items: center;
+        width: 80%;
+        height: 90vh;
+        border-radius: 10px;
+        background: rgba(255, 255, 255, 0.822);
+        color: black;
+
+        .card_img {
+            position: relative;
+        }
+    }
+}
+
+.card_body {
+    @extend .d-flex, .d_column;
+    justify-content: space-between;
+    margin-bottom: 10%;
+    width: 80%;
+    min-height: 50%;
+
+    h3 {
+        font-size: 26px;
+        text-align: center;
+    }
+
+    ul {
+        @extend .d-flex, .flex_between;
+        list-style-type: none;
+
+        li {
+            padding: 0.4em 0.8em;
+            color: #fff;
+            border-radius: 0.3rem;
+            text-align: center;
+            background-color: var(--purple);
+        }
+    }
+}
+
+.id {
+    @extend .d-flex, .d_column;
+    justify-content: space-between;
+    height: 70%;
+}
+
+h4 {
+    font-weight: normal;
+    
+    span {
+        font-weight: bold;
+    }
+
+    .mini {
+        font-weight: normal;
+        font-size: small;
+    }
+}
+
+
+/* s new */
+
+#newsletter {
+    @extend .d-flex, .flex_center;
+    height: 100vh;
+    background-image: url('../Illustrations_&_Logo/accueil/Pantherhome7.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: var(--darkblue);
+}
+
+#newsletter .container {
+    @extend .d-flex, .flex_between, .d_column;
+    padding: 40px 0;
+    width: 60%;
+    height: 70%;
+    border-radius: 150px;
+    background: linear-gradient(180deg, #fff, #fff, rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.25), rgba(255, 255, 255, 0));
+}
+
+#newsletter .container {
+
+    h3 {
+        font-size: 36px;
+    }
+}
+
+form {
+    @extend .d-flex, .flex_around, .d_column;
+    height: 80%;
+    width: 50%;
+
+    button {
+        color: var(--darkblue);
+        background-color: var(--ivory);
+        border: none;
+        height: 44px;
+        width: 154px;
+        border-radius: 38px;
+        cursor: pointer;
+        &:hover {
+            box-shadow: 0 0 20px var(--darkblue);
+        }
+    }
+        
+}
+
+textarea {
+    margin: 10px 0;
+}
+
+input, textarea {
+    background: none;
+    border-radius: 38px;
+    outline: none;
+    border: 1px solid var(--darkblue);
+    width: 90%;
+    padding: 14px;
+}
+
+
+
+
+/* sb rsp */
+
+@media (min-width: 768px) and (max-width: 1440px) {
+    
+    #banner {
+        background-size: 80%;
+        background-position: 33vw 4vw;
+
+        h1 {
+            font-size: 5vw;
+            margin-bottom: 10px;
+        }
+        
+        p {
+            font-size: 16px;
+        }
+    }
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+
+    #banner {
+        align-items: flex-start;
+        background-size: 80%;
+        background-position: 33vw 4vw;
+        padding: 0 6%;
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            margin-top: 14vw;
+            width: 100%;
+            height: 50%;
+        }
+
+        h1 {
+            font-size: 5vw !important;
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            font-size: 3vw;
+        }
+        
+        p {
+            margin-top: 30px;
+            font-size: 14px;
+        }
+    }
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+
+    #banner  {
+
+        .container {
+            height: 70%;
+        }
+    }
+}
+
+

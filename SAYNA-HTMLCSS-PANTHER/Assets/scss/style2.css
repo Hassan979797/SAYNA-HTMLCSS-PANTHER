@@ -1,0 +1,405 @@
+@charset "UTF-8";
+@font-face {
+  font-family: "Panthera";
+  src: url("../Fonts/Panthera/PantheraRegular-MVZ9J.ttf");
+}
+@font-face {
+  font-family: "Cantarell";
+  src: url("../Fonts/cantarell/Cantarell-Regular.ttf");
+}
+@font-face {
+  font-family: "Beyno";
+  src: url("../Fonts/beyno/BEYNO.ttf");
+}
+@font-face {
+  font-family:"Wakanda";
+  src: url("../Fonts/wakanda_forever/WakandaForever-Regular.ttf");
+}
+:root {
+  --ivory: #F2CEF2;
+  --silver: #9E91B7;
+  --pink: #DF99F2;
+  --purple: #3D2DA6;
+  --blue: #07338C;
+  --darkblue: #021740;
+}
+
+/* all */
+.d-flex, .left, .right, #history .container, #banner, .row_2 ul, .row_2, .icon, .row, footer .container, .footer_img, footer, nav ul, nav, header {
+  display: flex;
+}
+
+.flex_center, .footer_img, footer, header {
+  justify-content: center;
+  align-items: center;
+}
+
+.flex_between, .left, .right, .icon, .row, footer .container, nav ul, nav {
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.flex_end {
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.flex_start, #banner {
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.flex_around {
+  justify-content: space-around;
+  align-items: center;
+}
+
+.flex_evenly, #history .container, .row_2 ul {
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.d_column, .left, .right, footer .container {
+  flex-direction: column;
+}
+
+.w100, header {
+  width: 100%;
+}
+
+.border {
+  border: 2px solid rgba(188, 187, 189, 0.2823529412);
+}
+
+.test {
+  border: 1px solid #fff;
+}
+
+.test2 {
+  border: 1px solid green;
+}
+
+.test3 {
+  border: 1px solid yellow;
+}
+
+.test4 {
+  border: 1px solid red;
+}
+
+h1 {
+  font-family: "Panthera";
+  font-size: 68px;
+}
+
+h2 {
+  font-family: "Beyno";
+  font-size: 22px;
+  color: var(--silver);
+}
+
+p, a, h5, h4, h3, li {
+  font-family: "Cantarell";
+  font-size: 16px;
+}
+
+.citation {
+  font-family: "Cantarell";
+  font-size: 14px;
+  font-weight: lighter;
+}
+
+.p_footer {
+  font-family: "Cantarell";
+  font-size: 10px;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+/* alll*/
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-image: url("../Illustrations_&_Logo/all_pages/arrière_plan.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  color: #fff;
+}
+
+/* h */
+header {
+  height: 12vh;
+}
+
+nav {
+  width: 90%;
+}
+nav ul {
+  list-style-type: none;
+  width: 40%;
+}
+nav ul li {
+  text-align: center;
+  font-family: "Beyno";
+  font-size: 20px;
+  width: 30%;
+}
+nav ul li .actif {
+  color: var(--purple);
+  text-decoration: underline;
+}
+nav ul li a {
+  font-weight: normal;
+  text-transform: uppercase;
+}
+nav ul li a:hover {
+  color: var(--purple);
+  text-decoration: underline;
+}
+
+/* ftr */
+footer {
+  background-image: url("../Illustrations_&_Logo/all_pages/back_footer.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 80vh;
+}
+
+.footer_img {
+  position: relative;
+  height: 75%;
+  width: 25%;
+}
+
+.float {
+  position: absolute;
+  right: 28%;
+  top: 43%;
+  width: 11vw;
+}
+
+footer .container {
+  width: 60%;
+}
+
+.row, .row_2 {
+  width: 80%;
+}
+
+.row ul {
+  list-style-type: none;
+}
+.row ul li {
+  text-transform: uppercase;
+}
+.row h5 {
+  font-size: 22px;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  margin-bottom: 1.5vw;
+}
+.row a:hover {
+  text-decoration: underline;
+}
+
+.row_2 {
+  justify-content: flex-start;
+  align-items: flex-end;
+  margin-top: 4vw;
+}
+.row_2 p, .row_2 a {
+  font-size: 14px;
+  text-align: center;
+}
+.row_2 ul {
+  width: 100%;
+}
+
+/* ftxt*/
+p, h1, h2, h3, h4, h6, h5 {
+  position: relative;
+  -webkit-animation-name: textmove;
+          animation-name: textmove;
+  -webkit-animation-duration: 4s;
+          animation-duration: 4s;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+}
+
+@-webkit-keyframes textmove {
+  from {
+    right: 300px;
+  }
+  to {
+    right: 0px;
+  }
+}
+
+@keyframes textmove {
+  from {
+    right: 300px;
+  }
+  to {
+    right: 0px;
+  }
+}
+/* fh */
+.reseau .icon img:hover {
+  filter: grayscale(100%) hue-rotate(200deg);
+}
+
+.sidebar .container .row img:hover {
+  filter: grayscale(0%) hue-rotate(100deg) contrast(2000%);
+}
+
+.logo img:hover {
+  filter: grayscale(100%) hue-rotate(100deg);
+}
+
+
+/* rsp */
+/* hdr */
+@media (min-width: 320px) and (max-width: 728px) {
+  header .logo {
+    width: 30%;
+  }
+  header .logo img {
+    width: 100%;
+  }
+
+  nav ul {
+    width: 60%;
+  }
+  nav ul a {
+    font-size: 3vw;
+  }
+}
+/* footer */
+@media (min-width: 320px) and (max-width: 768px) {
+  footer {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+  }
+
+  .footer_img {
+    width: 100%;
+    height: 50vh;
+  }
+  .footer_img img {
+    max-width: 80%;
+    max-height: 100%;
+  }
+  .footer_img .float {
+    width: 20vw;
+    right: 40%;
+    max-height: 100%;
+  }
+
+  footer .container, footer .row, footer .row_2, footer ul {
+    width: 100%;
+    margin-top: 10px;
+  }
+  footer .row {
+    flex-direction: column;
+  }
+  footer .row .reseau {
+    margin-top: 20px;
+  }
+  footer .row_2 {
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 30px;
+  }
+}
+@media (min-width: 769px) and (max-width: 1025px) {
+  .row_2 {
+    align-items: center;
+    flex-direction: column;
+  }
+  .row_2 p {
+    text-align: center;
+  }
+}
+body {
+  background-image: url("../Illustrations_&_Logo/all_pages/arrière_plan.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #fff;
+}
+
+/* sb */
+#banner {
+  height: 90vh;
+  padding: 0 10%;
+  background-image: url("../Illustrations_&_Logo/Wakanda/Pantherwakanda1.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: left 4vw center;
+}
+#banner h1, #banner h2 {
+  color: var(--silver);
+}
+#banner h1 {
+  font-family: "Beyno";
+  font-size: 60px;
+  margin-bottom: 10px;
+}
+#banner h2 {
+  font-family: "Wakanda";
+  font-size: 43px;
+  margin-bottom: 3vw;
+}
+#banner p {
+  width: 40%;
+  text-align: justify;
+}
+
+/* truck */
+#history {
+  padding: 8vw 0;
+  background: url("../Illustrations_&_Logo/Wakanda/Pantherwakanda2.png");
+  background-repeat: no-repeat;
+  background-size: 100vw auto;
+  margin: 10px 0;
+  height: 340vh;
+}
+#history .container {
+  width: 100%;
+  height: 100%;
+}
+
+.left, .right {
+  width: 40%;
+  height: 100%;
+}
+.left h2, .right h2 {
+  margin-bottom: 20px;
+}
+.left p, .right p {
+  margin-bottom: 10px;
+  text-align: justify;
+}
+.left .list, .right .list {
+  text-align: start;
+}
+
+iframe {
+  width: 100%;
+  margin: 0;
+}
+
+.illustration {
+  width: 100%;
+}
+.illustration img {
+  width: 100%;
+}
+
